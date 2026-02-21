@@ -16,6 +16,7 @@ public class HomePage extends BasePage {
     }
 
     public EmiCalculatorPage tapOnCalculateEmiButton() {
+        EmiCalculatorUtil.setWaitTime();
         tapElement(By.id("btnStart"));
         return navigateToPage(EmiCalculatorPage.class);
     }
@@ -26,14 +27,10 @@ public class HomePage extends BasePage {
     }
 
     public boolean hasCalculateEmiButton() {
-//        EmiCalculatorUtil.setWaitTime();
-//        waitForElementToBeVisible(By.id("btnStart"));
         return getElements(By.id("btnStart")).size() > 0;
     }
 
     public boolean hasCompareLoanButton() {
-//        EmiCalculatorUtil.setWaitTime();
-//        waitForElementToBeVisible(By.id("btnCompare"));
         return getElements(By.id("btnCompare")).size() > 0;
     }
 }
