@@ -11,8 +11,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BaseTest {
-    AndroidDriver driver;
-    Page pg;
+    public AndroidDriver driver;
+    public Page pg;
 
     @BeforeClass
     public void setUpMobileApp() {
@@ -20,8 +20,8 @@ public class BaseTest {
             DesiredCapabilities caps = new DesiredCapabilities();
             caps.setCapability("appium:udid", "127.0.0.1:6555");
             caps.setCapability("appium:platformVersion", "13");
-            caps.setCapability("appium:appPackage", "com.bng.calculator");
-            caps.setCapability("appium:appActivity", "com.bng.calc.MainActivity");
+            caps.setCapability("appium:appPackage", "com.continuum.emi.calculator");
+            caps.setCapability("appium:appActivity", "com.finance.emicalci.activity.Splash_screnn");
             caps.setCapability("platformName", "Android");
             caps.setCapability("appium:automationName", "UiAutomator2");
 

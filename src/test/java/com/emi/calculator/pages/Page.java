@@ -25,7 +25,7 @@ public abstract class Page {
 
     public abstract String getTextFromElement(By selector);
 
-    public abstract void clickElement(By selector);
+    public abstract void tapElement(By selector);
 
     public abstract String getPageTitle();
 

@@ -40,7 +40,7 @@ public class BasePage extends Page{
     }
 
     @Override
-    public void clickElement(By selector) {
+    public void tapElement(By selector) {
         getElement(selector).click();
 
     }
