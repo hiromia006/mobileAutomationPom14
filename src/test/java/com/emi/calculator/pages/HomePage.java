@@ -22,6 +22,7 @@ public class HomePage extends BasePage {
     }
 
     public CompareLoanPage tapOnCompareLoanButton() {
+        EmiCalculatorUtil.setWaitTime();
         tapElement(By.id("btnCompare"));
         return navigateToPage(CompareLoanPage.class);
     }
