@@ -23,6 +23,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.aventstack/extentreports
     testImplementation 'com.aventstack:extentreports:5.1.1'
+
+    // video recording dependencies
+    testImplementation group: 'commons-codec', name: 'commons-codec', version: '1.15'
 }
 
 test {
