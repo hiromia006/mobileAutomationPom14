@@ -4,7 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class CompareLoanPage extends BasePage{
+public class CompareLoanPage extends BasePage {
     public CompareLoanPage(AndroidDriver driver) {
         super(driver);
     }
@@ -64,5 +64,9 @@ public class CompareLoanPage extends BasePage{
 
     public boolean isCompareLoansScreenDisplayed() {
         return getElements(By.id("monthly_emi_result_1")).size() > 0;
+    }
+
+    public boolean hasCompareLoanResultReset() {
+        return getElements(By.id("monthly_emi_result_1")).size() == 0;
     }
 }

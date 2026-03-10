@@ -6,6 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CompareLoanTest extends BaseTest {
+    CompareLoanPage loanPage;
+
     @Test(priority = 0)
     public void compareLoanShouldSucceed() {
 //        HomePage page=pg.navigateToPage(HomePage.class);
@@ -20,7 +22,7 @@ public class CompareLoanTest extends BaseTest {
 //                .tapCalculateBtn();
 //        Assert.assertTrue(loanPage.isCompareLoansScreenDisplayed());
 
-        CompareLoanPage loanPage = pg.navigateToPage(HomePage.class)
+        loanPage = pg.navigateToPage(HomePage.class)
                 .tapOnCompareLoanButton()
                 .fillLaon1Amount(15000)
                 .fillLaon1Interest(9)
@@ -31,5 +33,12 @@ public class CompareLoanTest extends BaseTest {
                 .tapCalculateBtn();
         Assert.assertTrue(loanPage.isCompareLoansScreenDisplayed());
 
+    }
+
+    @Test(priority = 1)
+    public void resetCompareLoanShouldSucceed() {
+        loanPage = loanPage
+                .tapResetBtn();
+        Assert.assertTrue(loanPage.hasCompareLoanResultReset());
     }
 }

@@ -3,6 +3,7 @@ package com.emi.calculator.test;
 import com.emi.calculator.pages.BasePage;
 import com.emi.calculator.pages.Page;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -39,5 +40,9 @@ public class BaseTest {
         System.out.println("Tearing down mobile app testing environment...");
         // Code to clean up mobile app testing environment goes here
         driver.quit();
+    }
+
+    public WebDriver getWebDriver() {
+        return driver;
     }
 }
