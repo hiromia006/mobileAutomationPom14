@@ -19,7 +19,7 @@ public class ReportManager {
     private static ExtentReports createInstance() {
         if (extent == null) {
             String workingDir = System.getProperty("user.dir");
-            String reportName = "Report.html";
+            String reportName = "Mobile Automation.html";
             path = "/build/extendReport/" + reportName;
             ExtentSparkReporter htmlReporter = new ExtentSparkReporter(workingDir + path);
             htmlReporter.config().setTheme(Theme.STANDARD);
